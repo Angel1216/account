@@ -1,0 +1,34 @@
+use jpa
+
+create table account(
+id int not null identity,
+name varchar(50) not null,
+balance decimal(10,2) not null
+);
+
+insert into account(name, balance) values('angel', 500.00)
+
+select * from account
+
+drop table account
+
+
+
+
+-----------------------------
+
+
+localhost:8082/saveAccount
+
+{
+	"name":"angel",
+	"balance":500.15
+}
+
+
+
+http://localhost:8082/recoveryAll
+
+
+
+http://localhost:8082/recoveryById/1
